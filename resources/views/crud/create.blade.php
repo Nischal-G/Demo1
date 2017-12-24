@@ -8,7 +8,7 @@
                 <h2>Create New Customer</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('CustomerCRUD.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('crud.index') }}"> Back</a>
             </div>
         </div>
     </div>
@@ -24,29 +24,6 @@
         </div>
     @endif
 
-<!--     {!! Form::open(array('route' => 'crud.store','method'=>'POST')) !!}
-    <div class="row">
-
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Customer name :</strong>
-                {!! Form::text('customerName', null, array('placeholder' => 'Customer Name','class' => 'form-control')) !!}
-            </div>
-        </div>
-
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Description:</strong>
-                {!! Form::text('amountRecived', null, array('placeholder' => 'Amount Received','class' => 'form-control')) !!}
-            </div>
-        </div>
-
-        <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <button type="submit" class="btn btn-primary">Submit</button>
-        </div>
-
-    </div>
-    {!! Form::close() !!} -->
 
     <form action="{{ route('crud.store') }}" method="POST">
 
