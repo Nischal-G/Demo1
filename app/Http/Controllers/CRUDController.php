@@ -23,28 +23,27 @@ class CRUDController extends Controller
     {
         $this->validate($request, [
             'customerName' => 'required',
-            'retailMiti' => 'required',
-            'daysEcp' => 'required',
-            'model' => 'required',
-            'mobileNo' => 'required',
-            'salesExe' => 'required',
-            'salesPrice' => 'required',
+            // 'retailMiti' => 'required',
+            // 'daysEcp' => 'required',
+            // 'model' => 'required',
+            // 'mobileNo' => 'required',
+            // 'salesExe' => 'required',
+            // 'salesPrice' => 'required',
             'amountReceived' => 'required',
-            'principleDue' => 'required',
-            'interest' => 'required',
-            'totalDue' => 'required',
-            'remarks' => 'required',
+            // 'principleDue' => 'required',
+            // 'interest' => 'required',
+            // 'totalDue' => 'required',
+            // 'remarks' => 'required',
         ]);
 
         Customer::create($request->all());
-        return redirect()->route('crud.index')
-                        ->with('success','Customer created successfully');
+        return redirect()->route('crud.index')->with('success','Customer created successfully');
     }
 
     public function show($id)
     {
-        $custom = Customer::find($id);
-        return view('crud.show',compact('custom'));
+        // $custom = Customer::find($id);
+        // return view('crud.show',compact('custom'));
     }
 
     public function edit($id)

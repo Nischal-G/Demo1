@@ -26,6 +26,7 @@
 
 
     <form action="{{ route('crud.store') }}" method="POST">
+    {{ csrf_field() }}
 
       <div class="form-group">
          <strong>Customer name :</strong>
@@ -33,8 +34,8 @@
       </div>
 
       <div class="form-group">
-        <strong>Description:</strong>
-        <input type="text" class="form-control" id="amountRecived" name="amountRecived" placeholder="Password">
+        <strong>Amount Received:</strong>
+        <input type="text" class="form-control" id="amountReceived" name="amountReceived" placeholder="Amount Received">
       </div>
 
       <button type="submit" class="btn btn-primary">Submit</button>
