@@ -17,28 +17,61 @@
 </head>
 <body>
 
-   <div class="pull-right">
-            <a class="btn btn-success btn-lg" href="{{ route('crud.index') }}"> Create New Customer</a>
-        </div><br>
-    
+   
+    <br><br><br><br>
     <form>
       <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        <div class="row">
+        <div class="col-md-2"></div>
+          <div class="col-md-3">
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <br><br>
+            <hr>  
+           
+          </div>
+          
+          <div class="col-md-2">
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+             <div >
+              <a class="btn btn-success btn-lg" href="{{ route('crud.index') }}"> Create New Customer</a>
+            </div>
+          </div>
+
+           <div class="col-md-3">
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+
+           <div class="col-md-2"></div>
+
+        </div>
       </div>
-      <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-      </div>
-      <div class="form-check">
-        <label class="form-check-label">
-          <input type="checkbox" class="form-check-input">
-          Check me out
-        </label>
-      </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+
+  
 
 </body>
 
