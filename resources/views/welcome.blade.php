@@ -16,6 +16,10 @@
 
 </head>
 <body>
+
+   <div class="pull-right">
+            <a class="btn btn-success btn-lg" href="{{ route('crud.index') }}"> Create New Customer</a>
+        </div><br>
     
     <form>
       <div class="form-group">
