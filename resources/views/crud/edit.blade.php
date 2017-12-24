@@ -24,28 +24,22 @@
         </div>
     @endif
 
-    {!! Form::model($custom, ['method' => 'PATCH','route' => ['crud.update', $custom->id]]) !!}
-    <div class="row">
 
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Customer Name:</strong>
-                {!! Form::text('customerName', null, array('placeholder' => 'Name','class' => 'form-control')) !!}
-            </div>
-        </div>
 
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Amount Received:</strong>
-                {!! Form::text('amountRecived', null, array('placeholder' => 'Amount Received','class' => 'form-control')) !!}
-            </div>
-        </div>
+    <form method="PATCH" action="{{ action('CRUDController@update', $custom->id) }}">
+   
 
-        <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <button type="submit" class="btn btn-primary">Submit</button>
-        </div>
+      <div class="form-group">
+         <strong>Customer name :</strong>
+        <input type="text" class="form-control" id="customerName" name="customerName" placeholder="Enter customer name">
+      </div>
 
-    </div>
-    {!! Form::close() !!}
+      <div class="form-group">
+        <strong>Amount Received:</strong>
+        <input type="text" class="form-control" id="amountReceived" name="amountReceived" placeholder="Amount Received">
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
 
 @endsection
