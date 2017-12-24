@@ -36,31 +36,29 @@
             <th>Remarks</th>
             <th width="280px">Action</th>
         </tr>
-        @foreach ($custom as $key => $cust)
+        @foreach ($custom as $cust)
         <tr>
             <td>{{ ++$i }}</td>
-            <td>{{ $cust->customerName }}</td>
+            <td>{{ $cust['customerName']}}</td>
             <td>{{ $cust->retailMiti}}</td>
             <td>{{ $cust->daysEcp}}</td>
             <td>{{ $cust->model}}</td>
             <td>{{ $cust->mobileNo}}</td>
             <td>{{ $cust->salesExe}}</td>
             <td>{{ $cust->salesPrice}}</td>
-            <td>{{ $cust->amountRecived}}</td>
+            <td>{{ $cust['amountReceived']}}</td>
             <td>{{ $cust->principleDue}}</td>
             <td>{{ $cust->interest}}</td>
             <td>{{ $cust->totalDue}}</td>
             <td>{{ $cust->remarks}}</td>
             <td>
-                <a class="btn btn-info" href="{{ route('crud.show',$cust->id) }}">Show</a>
+                <!-- <a class="btn btn-info" href="{{ route('crud.show',$cust->id) }}">Show</a> -->
                 <a class="btn btn-primary" href="{{ route('crud.edit',$cust->id) }}">Edit</a>
-
-                <form action="{{ route('crud.destroy',$cust->id ) }}" method="POST">
-                  <button type="submit" class="btn btn-primary" id="Delete" name="Delete">Delete</button>
-                </form>
+                 <a class="btn btn-danger" href="{{ route('crud.destroy',$cust->id) }}">Delete</a>
             </td>
         </tr>
         @endforeach
     </table>
+    {!! $custom->render() !!}
 
 @endsection

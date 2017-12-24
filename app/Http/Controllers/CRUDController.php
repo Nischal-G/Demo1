@@ -29,7 +29,7 @@ class CRUDController extends Controller
             'mobileNo' => 'required',
             'salesExe' => 'required',
             'salesPrice' => 'required',
-            'amountRecived' => 'required',
+            'amountReceived' => 'required',
             'principleDue' => 'required',
             'interest' => 'required',
             'totalDue' => 'required',
