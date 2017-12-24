@@ -52,10 +52,14 @@
             <td>{{ $cust->totalDue}}</td>
             <td>{{ $cust->remarks}}</td>
             <td>
-                <!-- <a class="btn btn-info" href="{{ route('crud.show',$cust->id) }}">Show</a> -->
                 <a class="btn btn-warning btn-sm" href="{{ route('crud.edit',$cust->id) }}">Edit</a>
-                 <a class="btn btn-danger btn-sm" href="{{ route('crud.destroy',$cust->id) }}">Delete</a>
-            </td>
+
+            <form action="{{action('CRUDController@destroy', $cust['id'])}}" method="post">
+              {{csrf_field()}}
+              <input name="_method" type="hidden" value="DELETE">
+              <button class="btn btn-danger btn-sm" type="submit">Delete</button>
+            </form>
+            
         </tr>
         @endforeach
     </table>

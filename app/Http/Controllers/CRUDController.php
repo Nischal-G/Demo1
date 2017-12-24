@@ -70,15 +70,14 @@ class CRUDController extends Controller
         ]);
 
         Customer::find($id)->update($request->all());
-        return redirect()->route('crud.index')
-                        ->with('success','Customers detail updated successfully');
+        return redirect()->route('crud.index')->with('success','Customers detail updated successfully');
     }
 
     public function destroy($id)
     {
-        Customers::find($id)->delete();
-        return redirect()->route('crud.index')
-                        ->with('success','Customer deleted successfully');
+        Customer::find($id)->delete();
+        return redirect()->route('crud.index');
+
     }
     
 }

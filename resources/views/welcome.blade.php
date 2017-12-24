@@ -45,7 +45,7 @@
           <div class="col-md-2">
             <br><br><br><br><br><br><br><br><br><br><br><br>
              <div >
-              <a class="btn btn-success btn-lg" href="{{ route('crud.index') }}"> Create New Customer</a>
+              <a class="btn btn-success btn-lg" href="{{ route('crud.index') }}"> Customer List </a>
             </div>
           </div>
 
